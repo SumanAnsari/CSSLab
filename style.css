@@ -13,13 +13,6 @@ body{
     justify-content: center;
 }
 
-.container{
-    width: 640px;
-    height: 480px;
-    position: relative;
-    transform-style: preserve-3d;
-}
-
 .front{
     top: 0;
     left: 0;
@@ -31,6 +24,13 @@ body{
     align-content: center;
     justify-content: center;
     transform: translateZ(1px);
+}
+
+.container{
+    width: 640px;
+    height: 480px;
+    position: relative;
+    transform-style: preserve-3d;
 }
 
 #icon{
@@ -46,8 +46,18 @@ body{
 }
 
 #icon:hover{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
+}
+
+
+@keyframes flip{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(180deg);
+    }
 }
 
 .cats{
@@ -73,13 +83,4 @@ body{
     animation: flip;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-}
-
-@keyframes flip{
-    from{
-        transform: rotateY(0deg);
-    }
-    to{
-        transform: rotateY(180deg);
-    }
 }
